@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/paige1381/georgia_maxwell_backend#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "method-override": "^3.0.0",
     "mongoose": "^5.3.2",
