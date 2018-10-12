@@ -10,7 +10,8 @@ const Invite = require("../models/invites.js");
 var whitelist = [
   "http://www.georgiaandmaxwell.com/",
   "http://localhost:3000/",
-  "https://georgia-maxwell-ui.herokuapp.com/"
+  "https://georgia-maxwell-ui.herokuapp.com/",
+  "https://georgia-maxwell-backend.herokuapp.com/"
 ];
 var corsOptions = {
   origin: function(origin, callback) {
