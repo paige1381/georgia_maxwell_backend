@@ -6,22 +6,7 @@ const morgan = require("morgan"); // npm i morgan
 require("pretty-error").start(); // npm i pretty-error
 const app = express();
 const methodOverride = require("method-override"); // npm i method-override
-const cors = require("cors"); // npm i cors
-
-var whitelist = [
-  "http://www.georgiaandmaxwell.com/",
-  "http://localhost:3000/",
-  "https://georgia-maxwell-ui.herokuapp.com/"
-];
-var corsOptions = {
-  origin: function(origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  }
-};
+// const cors = require("cors"); // npm i cors
 
 // controllers
 const invitesController = require("./controllers/invites.js");
