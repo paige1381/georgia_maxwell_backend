@@ -11,7 +11,8 @@ var whitelist = [
   "http://www.georgiaandmaxwell.com/",
   "http://localhost:3000/",
   "https://georgia-maxwell-ui.herokuapp.com/",
-  "https://georgia-maxwell-backend.herokuapp.com/"
+  "https://georgia-maxwell-backend.herokuapp.com/",
+  /\.georgia-maxwell-backend.herokuapp\.com$/
 ];
 var corsOptions = {
   origin: function(origin, callback) {
