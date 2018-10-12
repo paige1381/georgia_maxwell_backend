@@ -43,7 +43,7 @@ app.use(cors());
 
 // Routes =============================
 // controllers
-app.use("/invites", invitesController);
+// app.use("/invites", invitesController);
 // app.use("/comments", commmentsController);
 // app.use("/user", sessionsController);
 
