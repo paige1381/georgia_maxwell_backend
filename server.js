@@ -39,11 +39,11 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
 app.use(morgan("dev")); // logs request info in console
-app.use(cors());
+// app.use(cors());
 
 // Routes =============================
 // controllers
-// app.use("/invites", invitesController);
+app.use("/invites", invitesController);
 // app.use("/comments", commmentsController);
 // app.use("/user", sessionsController);
 
