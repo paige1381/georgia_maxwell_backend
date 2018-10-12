@@ -6,7 +6,7 @@ const morgan = require("morgan"); // npm i morgan
 require("pretty-error").start(); // npm i pretty-error
 const app = express();
 const methodOverride = require("method-override"); // npm i method-override
-// const cors = require("cors"); // npm i cors
+const cors = require("cors"); // npm i cors
 
 // controllers
 const invitesController = require("./controllers/invites.js");
@@ -21,10 +21,7 @@ const PORT = process.env.PORT || 3001; // (remote || local)
 const mongoURI =
   process.env.MONGODB_URI ||
   "mongodb://localhost:27017/georgia_maxwell_wedding"; // locate mongo databases (remote || local)
-mongoose.connect(
-  mongoURI,
-  { useMongoClient: true }
-); // connect to location
+mongoose.connect(mongoURI); // connect to location
 mongoose.Promise = global.Promise; // setting the promise library to native
 
 // errors
@@ -39,7 +36,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
 app.use(morgan("dev")); // logs request info in console
-// app.use(cors());
+app.use(cors());
 
 // Routes =============================
 // controllers
